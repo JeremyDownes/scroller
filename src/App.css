@@ -1,22 +1,82 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
+body {  
+  overflow-y: hidden;
+  padding: 1vh 1vw;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+   -webkit-touch-callout: none !important;
+  -webkit-user-select: none;
 }
 
-.App-link {
-  color: #09d3ac;
+
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #282c34;
+  min-height:73vh;
+}
+
+.player {
+  height: 6vw;
+  width: 6vw;
+  position: absolute;
+}
+
+.button-left, .button-right {
+  height: 73vh;
+  width: 9vw;
+  background-color: rgba(255,255,255,.3);
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+.button-left {
+  position: fixed;
+  left: 1vw;
+  background-image: url('resources/images/arrow-left.png');
+}
+
+.button-right {
+  background-image: url('resources/images/arrow-right.png');
+  position: fixed;
+  right: 1vw;
+}
+
+.field {
+  width: 80vw;
+  height: 73vh;
+  z-index: 1;
+  background-image: url('resources/images/background.jpg');
+  background-size: cover;
+}
+
+.stand-right {
+ background-image: url('resources/images/standing-right.gif'); 
+ background-size: cover;
+}
+
+
+.run-right {
+ background-image: url('resources/images/running-right.gif'); 
+ background-size: cover;
+}
+
+.stand-left {
+ background-image: url('resources/images/standing-left.gif'); 
+ background-size: cover;
+}
+
+.run-left {
+ background-image: url('resources/images/running-left.gif'); 
+ background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: #282c34;
 }
