@@ -9,6 +9,8 @@ import './App.css';
   var playerClass = "player stand-right"
   var moving = null
   var modifier = 0
+  var fall = 0
+  var maxFall = 5
 
 function App() {
 
@@ -28,7 +30,11 @@ function App() {
   if(lift===0||lift>maxJump) {
     if(y<54){
       modifier = x===20&&moving==='left'? modifier+1 : x===70&&moving==='right'? modifier-1 : modifier
-      y++}
+      y+=(.04*fall)<maxFall?.04*fall: maxFall
+
+      if(y>54){y=54}
+      fall++
+    }
   }
     console.log(y)
   if(moving==="right") {
@@ -37,11 +43,7 @@ function App() {
   if(moving==="left") {
     if(x>20){x--}
   } 
-  if(moving==="jump") {
-    if(lift===0) {
-      setAction(false)
-    }
-  } 
+
 
 })
 
