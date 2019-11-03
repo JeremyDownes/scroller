@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
   var lift = 0
-  var maxJump = 15
+  var maxJump = 20
   var x=9
   var y=54
   var floor = 54
@@ -20,9 +20,9 @@ function App() {
     // console.log(moving)
 
   if(lift>0&&lift<=maxJump) {
-    lift++
-    y = y-1
+    y = y-5/lift
     modifier = x===20&&moving==='left'? modifier+1 : x===70&&moving==='right'? modifier-1 : modifier
+    lift++
     lift=lift%15
   }
   if(lift===0||lift>maxJump) {
