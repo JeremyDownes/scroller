@@ -78,7 +78,7 @@ function App() {
 
   const [action, setAction] = useState(false)
   const [overlay, setOverlay] = useState(null)
-  var obstacles = [{component:<figure className={twentyone>=80?'skeleton':'skeleton alt'} style={{left: 100+(skeleton/4)+progress+modifier+"vw", top: "54vh"}}></figure>,position:[100+skeleton/4,54]}]
+  var obstacles = [{component:<figure className={twentyone>=80?'skeleton':'skeleton alt'} style={{left: 100+(skeleton/4)+progress+modifier+"vw", top: "54vh"}}></figure>,position:[100+skeleton/4,54]},{component:<figure className={twentyone>=80?'skeleton':'skeleton alt'} style={{left: 175+(skeleton/4)+progress+modifier+"vw", top: "54vh"}}></figure>,position:[175+skeleton/4,54]},{component:<figure className={twentyone>=80?'skeleton':'skeleton alt'} style={{left: 250+(skeleton/4)+progress+modifier+"vw", top: "54vh"}}></figure>,position:[250+skeleton/4,54]},{component:<figure className={twentyone>=80?'skeleton':'skeleton alt'} style={{left: 475+(skeleton/4)+progress+modifier+"vw", top: "54vh"}}></figure>,position:[475+skeleton/4,54]},]
   position=[x-progress-modifier,y]
 
 const handleResize = () => {
